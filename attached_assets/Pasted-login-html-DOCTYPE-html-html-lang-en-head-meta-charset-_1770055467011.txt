@@ -1,0 +1,133 @@
+login.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login - Hyderabad Fine Gold 999</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  background:#000;
+  color:#fff;
+  font-family:Arial,sans-serif;
+  text-align:center;
+}
+.card{
+  background:#111;
+  max-width:350px;
+  margin:80px auto;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(212,175,55,0.4);
+}
+h2{color:#FFD700;}
+input{
+  width:90%;
+  padding:10px;
+  margin:8px 0;
+}
+button{
+  background:#D4AF37;
+  border:none;
+  padding:10px 20px;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+a{color:#FFD700;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Login / Register</h2>
+
+  <input type="email" id="email" placeholder="Email"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+
+  <button onclick="login()">Login</button><br><br>
+  <button onclick="register()">Register</button>
+
+  <p id="msg"></p>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+/* 🔴 HERE PASTE YOUR firebaseConfig */
+const firebaseConfig = {
+  apiKey: "PASTE_HERE",
+  authDomain: "PASTE_HERE",
+  projectId: "PASTE_HERE",
+  storageBucket: "PASTE_HERE",
+  messagingSenderId: "PASTE_HERE",
+  appId: "PASTE_HERE"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.login = function(){
+  const email = document.getElementById("email").value;
+  const pass = document.getElementById("password").value;
+
+  signInWithEmailAndPassword(auth, email, pass)
+  .then(()=>{
+    window.location.href="index.html";
+  })
+  .catch(err=>{
+    document.getElementById("msg").innerText = err.message;
+  });
+}
+
+window.register = function(){
+  const email = document.getElementById("email").value;
+  const pass = document.getElementById("password").value;
+
+  createUserWithEmailAndPassword(auth, email, pass)
+  .then(()=>{
+    document.getElementById("msg").innerText="Registered successfully. Now login.";
+  })
+  .catch(err=>{
+    document.getElementById("msg").innerText = err.message;
+  });
+}
+</script>
+
+</body>
+</html>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "PASTE_HERE",
+  authDomain: "PASTE_HERE",
+  projectId: "PASTE_HERE",
+  storageBucket: "PASTE_HERE",
+  messagingSenderId: "PASTE_HERE",
+  appId: "PASTE_HERE"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user)=>{
+  if(!user){
+    window.location.href="login.html";
+  }
+});
+
+window.logout = function(){
+  signOut(auth).then(()=>{
+    window.location.href="login.html";
+  });
+}
+</script>
+
+<button onclick="logout()">Logout</button>

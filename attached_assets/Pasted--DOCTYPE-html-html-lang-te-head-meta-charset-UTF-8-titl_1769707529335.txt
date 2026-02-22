@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<title>Hyderabad Fine Gold 999</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#000;
+  color:white;
+  text-align:center;
+}
+header{
+  padding:50px 20px;
+  background:radial-gradient(circle,#222,#000);
+}
+h1{
+  color:#D4AF37;
+  text-shadow:0 0 15px gold;
+}
+.tag{
+  color:#FFD700;
+  font-size:20px;
+  margin-top:10px;
+}
+.section{
+  padding:40px 20px;
+  border-top:1px solid #222;
+}
+.card{
+  background:#111;
+  margin:20px auto;
+  padding:20px;
+  max-width:360px;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(212,175,55,0.3);
+}
+.quote{
+  color:#FFD700;
+  font-style:italic;
+  margin-top:10px;
+}
+button{
+  margin-top:15px;
+  padding:12px 20px;
+  border:none;
+  border-radius:25px;
+  background:#D4AF37;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+}
+input{
+  width:90%;
+  padding:10px;
+  margin-top:10px;
+}
+.small{
+  color:#aaa;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>HYDERABAD FINE GOLD 999</h1>
+  <div class="tag">మీ బంగారం మీ దగ్గరే</div>
+</header>
+
+<div class="section">
+  <h2>ఈరోజు ధరలు</h2>
+
+  <div class="card">
+    <h3>Gold</h3>
+    <p>10 గ్రాములు – ₹1,85,000</p>
+    <div class="quote">“ధర మారొచ్చు… నమ్మకం కాదు.”</div>
+  </div>
+
+  <div class="card">
+    <h3>Silver</h3>
+    <p>1 కిలో – ₹4,00,000</p>
+    <div class="quote">“విలువ ఉన్నచోటే పెట్టుబడి.”</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="card">
+    <h2>100% Cash Return</h2>
+    <p>100% నగదు రిటర్న్ అందుబాటులో ఉంది</p>
+    <div class="quote">“ఇక్కడ లాభం కాదు… నమ్మకం మొదట.”</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="card">
+    <h2>Payment Options</h2>
+    <p>PhonePe | Google Pay | Credit / Debit Cards</p>
+    <div class="quote">సురక్షితమైన డిజిటల్ చెల్లింపులు</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>బుకింగ్</h2>
+
+  <div class="card">
+    <p class="small">Booking Time: 12 PM – 8 PM</p>
+    <input placeholder="పేరు / Name">
+    <input placeholder="ఫోన్ నంబర్ / Phone">
+    <button onclick="alert('Booking Received')">Book Now</button>
+
+    <div class="quote">“మీ బంగారం మీ పేరుపై ఉండాలి.”</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="card">
+    <h2>నమ్మకం</h2>
+    <div class="quote">“బంగారం కంటే విలువైనది నమ్మకం.”</div>
+    <div class="quote">“VS కాదు – Hyderabad Fine Gold 999.”</div>
+  </div>
+</div>
+
+<footer class="section">
+📞 7997877887 <br>
+📍 KPHB Colony, Hyderabad
+</footer>
+
+</body>
+</html>

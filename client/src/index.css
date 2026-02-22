@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Ramabhadra&family=Suranna&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%; /* #000000 */
+  --foreground: 46 65% 52%; /* #D4AF37 Gold */
+  
+  --card: 0 0% 7%; /* #111111 */
+  --card-foreground: 46 65% 52%;
+  
+  --popover: 0 0% 7%;
+  --popover-foreground: 46 65% 52%;
+  
+  --primary: 46 65% 52%; /* Gold */
+  --primary-foreground: 0 0% 0%; /* Black */
+  
+  --secondary: 0 0% 12%;
+  --secondary-foreground: 46 65% 52%;
+  
+  --muted: 0 0% 12%;
+  --muted-foreground: 46 20% 40%; /* Muted Gold */
+  
+  --accent: 46 65% 52%;
+  --accent-foreground: 0 0% 0%;
+  
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 46 30% 20%; /* Dark Gold Border */
+  --input: 46 30% 20%;
+  --ring: 46 65% 52%;
+  
+  --radius: 0.5rem;
+  
+  --gold-glow: 0 0 20px rgba(212, 175, 55, 0.15);
+  --gold-glow-hover: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground selection:bg-primary/30 selection:text-primary;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply tracking-wide;
+  }
+
+  .font-telugu {
+    font-family: 'Ramabhadra', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#D4AF37] via-[#F4CF57] to-[#D4AF37];
+  }
+  
+  .border-gold-gradient {
+    border-image: linear-gradient(to right, #B48F17, #F4CF57, #B48F17) 1;
+  }
+
+  .gold-shadow {
+    box-shadow: var(--gold-glow);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .gold-shadow:hover {
+    box-shadow: var(--gold-glow-hover);
+  }
+
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #25D366;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.6);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
