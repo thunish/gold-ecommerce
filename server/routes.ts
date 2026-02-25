@@ -364,6 +364,6 @@ export async function registerRoutes(
     }
   });
 
-  await storage.seedProducts();
+  // await storage.seedProducts();
   return httpServer;
 }
