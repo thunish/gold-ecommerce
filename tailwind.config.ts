@@ -83,7 +83,7 @@ export default {
         },
         obsidian: '#050505',
         charcoal: '#111111',
-        royalGold: "#F5BD02",
+        royalGold: "#D4AF37",
         shinyBlack: "#0B0B0B",
         status: {
           online: "rgb(34 197 94)",

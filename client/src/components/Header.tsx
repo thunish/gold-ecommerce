@@ -72,7 +72,7 @@ export function Header() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-2xl md:text-3xl font-display font-bold text-gradient-gold tracking-widest uppercase mb-1">
+              <h1 className="text-2xl md:text-3xl font-display font-bold text-royalGold tracking-widest uppercase mb-1">
                 Hyderabad Fine Gold
                 <span className="ml-2 text-sm bg-royalGold text-black px-1.5 rounded-sm align-middle">999</span>
               </h1>

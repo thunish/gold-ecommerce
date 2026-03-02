@@ -4,7 +4,7 @@ import { db } from "./db";
 import { MetalPrices, metalPrices } from "@shared/schema";
 import {eq} from "drizzle-orm";
 
-const TROY_OUNCE_TO_GRAM = 28.35;
+const TROY_OUNCE_TO_GRAM = 31.1035;
 
 export async function updateRatesOnce() {
     try{
@@ -19,8 +19,8 @@ export async function updateRatesOnce() {
             headers: { "x-access-token": process.env.GOLD_API_KEY! },
             }
         );
-        const goldPerGram = goldRes.data.price / TROY_OUNCE_TO_GRAM;
-        const silverPerGram = silverRes.data.price / TROY_OUNCE_TO_GRAM;
+        const goldPerGram = (goldRes.data.price / TROY_OUNCE_TO_GRAM) * 1.06 *1.028;
+        const silverPerGram = (silverRes.data.price / TROY_OUNCE_TO_GRAM) * 1.06 *1.030;
 
         await db.update(metalPrices).set({
             pricePerGram:goldPerGram.toFixed(2),

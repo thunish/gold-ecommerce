@@ -46,7 +46,7 @@ export default function Home() {
             </h2>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-tight">
               Hyderabad <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B48F17] via-[#F4CF57] to-[#B48F17]">
+              <span className="text-royalGold bg-clip-text bg-gradient-to-r from-[#B48F17] via-[#F4CF57] to-[#B48F17]">
                 Fine Gold
               </span>
             </h1>
